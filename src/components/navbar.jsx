@@ -4,12 +4,20 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import Button from 'react-bootstrap/Button'
 
+
+import { cargoServices } from "../services/general";
 const NavBar = () => {
 
-
+    
     // const [statevariable, varaiblechagnefucntion] = useState(defaultvalue)
     const [x, setX] = useState('x')
 
+    const  getCompanies =  async () => { 
+        const res = await cargoServices.getAllCompanies()
+
+        console.log(res)
+    }
+    getCompanies()
     return (
         
     <Navbar bg="primary" variant="dark">
