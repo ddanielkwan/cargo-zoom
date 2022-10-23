@@ -23,7 +23,9 @@ function Test() {
             //else if itemId not in response body of items aPI
             //call function
             //function () {
-                //mark itemId in database as location: x
+                //mark itemId in database as location: x #so that when someelse scans the same item elsewhere
+                //it would tell them that it is in location x
+                //
             //}
           } else {
             setData("Not Found");
